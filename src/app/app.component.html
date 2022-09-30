@@ -11,7 +11,7 @@
 
 <div *ngIf="displayEdit">
   <h2>Update User Information</h2>
-  <form (ngSubmit)="toggleEdit()">
+  <form>
     <p>
       <label class="label" for="name">Name:</label>
       <input name="Name:" id="name" [(ngModel)]="user1.name" />
