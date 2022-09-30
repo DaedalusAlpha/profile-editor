@@ -6,6 +6,12 @@
     <p><span class="label">Name:</span>{{ user1.name }}</p>
     <p><span class="label">Age:</span>{{ user1.age }}</p>
     <p><span class="label">Favorite Color:</span>{{ user1.favoriteColor }}</p>
+    <p>
+      <span class="label"
+        >User is <span *ngIf="!user1.happy"> not </span>happy</span
+      >
+    </p>
+    <p><span class="label">Favorite Food:</span>{{ user1.favoriteFood }}</p>
   </div>
 </div>
 
@@ -14,25 +20,38 @@
   <form>
     <p>
       <label class="label" for="name">Name:</label>
-      <input name="Name:" id="name" [(ngModel)]="user1.name" />
+      <input name="name" id="name" [(ngModel)]="user1.name" />
     </p>
     <p>
       <label class="label" for="age">Age:</label>
       <input
         type="number"
         min="0"
-        name="Age:"
+        name="age"
         id="age"
         [(ngModel)]="user1.age"
       />
     </p>
     <p>
       <label class="label" for="color">Favorite Color:</label>
+      <input name="color" id="color" [(ngModel)]="user1.favoriteColor" />
+    </p>
+    <p>
+      <label class="label" for="happy">Is the user happy?</label>
       <input
-        name="Favorite Color:"
-        id="color"
-        [(ngModel)]="user1.favoriteColor"
+        type="checkbox"
+        name="happy"
+        id="happy"
+        [(ngModel)]="user1.happy"
       />
+    </p>
+    <p>
+      <label class="label" for="food">Favorite Food:</label>
+      <select name="food" id="food" [(ngModel)]="user1.favoriteFood">
+        <option value="pizza">pizza</option>
+        <option value="bacon">bacon</option>
+        <option value="cheese">cheese</option>
+      </select>
     </p>
   </form>
 </div>

@@ -13,6 +13,8 @@ export class AppComponent {
     name: 'Matt',
     age: 40,
     favoriteColor: 'blue',
+    happy: true,
+    favoriteFood: 'pizza',
   };
 
   toggleEdit(): void {
